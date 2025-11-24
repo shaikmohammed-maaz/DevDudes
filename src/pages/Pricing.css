@@ -1,0 +1,193 @@
+.pricing-page {
+    padding-top: 70px;
+}
+
+/* Header */
+.pricing-header {
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    background: linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%);
+    text-align: center;
+}
+
+.pricing-header h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Pricing Cards */
+.pricing-cards-section {
+    background: white;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.pricing-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    border: 2px solid transparent;
+    transition: all var(--transition-base);
+}
+
+.pricing-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-2xl);
+}
+
+.pricing-card.highlighted {
+    background: linear-gradient(135deg, #F7FAFC 0%, #FFF 100%);
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    right: var(--spacing-xl);
+    background: var(--gradient-accent);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+}
+
+.pricing-header-content {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.pricing-header-content h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-dark);
+}
+
+.price {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.plan-description {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.features-list li {
+    padding: var(--spacing-sm) 0;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.check-icon {
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: var(--font-size-lg);
+}
+
+.btn-full {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: var(--color-bg-light);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.faq-item {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-item h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-dark);
+}
+
+.faq-item p {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+}
+
+/* CTA Section */
+.pricing-cta-section {
+    background: var(--gradient-primary);
+    padding: var(--spacing-3xl) 0;
+    margin-top: var(--spacing-3xl);
+    border-radius: var(--radius-2xl);
+    margin-left: var(--spacing-lg);
+    margin-right: var(--spacing-lg);
+}
+
+.pricing-cta-content {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pricing-cta-content h2 {
+    color: white;
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.pricing-cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.highlighted {
+        transform: scale(1);
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-cta-section {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+}
